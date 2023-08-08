@@ -35,8 +35,18 @@ hsp = move * walksp;
 vsp = vsp + grv;
 
 
+
+
+// more jumping
+
+if place_meeting(x, y + 5 + jumpLeanence, ground)  {
+	jumpTiming = 5
+} else {
+	jumpTiming = jumpTiming - 1
+}
+
 //jumping
-if (place_meeting(x, y + jumpLeanence, ground)) && (jumpKey) {
+if ((place_meeting(x, y + jumpLeanence, ground)) or jumpTiming > 0) && (jumpKey) {
 	vsp = -4
 };
 if (place_meeting(x + jumpLeanence, y, ground)) && (jumpKey) {

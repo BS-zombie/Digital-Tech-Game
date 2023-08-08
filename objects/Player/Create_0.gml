@@ -5,7 +5,7 @@ hmtm = 0
 vmtm = 0
 grv = 0.2
 walksp = 1.5
-jumpLeanence = 3
+jumpLeanence = 0
 inertia = 0.3
 
 //game
@@ -13,7 +13,7 @@ deaths = 0
 startX = x
 startY = y
 
-
+jumpTiming = 0
 onGround = false
 touchingSpikes = false
 outOfBounds = false
