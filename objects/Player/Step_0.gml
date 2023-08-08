@@ -1,7 +1,7 @@
-jumpKey = keyboard_check_pressed(vk_space)
-leftKey = keyboard_check(vk_left)
-rightKey = keyboard_check(vk_right)
-dashKey = keyboard_check(ord("Z"))
+var jumpKey = keyboard_check_pressed(vk_space)
+var leftKey = keyboard_check(vk_left)
+var rightKey = keyboard_check(vk_right)
+var dashKey = keyboard_check(ord("Z"))
 var animationstep = 1
 
 if distance_to_object(ground) <= 1 {
