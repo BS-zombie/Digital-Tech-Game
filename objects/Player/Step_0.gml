@@ -1,8 +1,17 @@
-var jumpKey = keyboard_check_pressed(vk_space)
-var leftKey = keyboard_check(vk_left)
-var rightKey = keyboard_check(vk_right)
-var dashKey = keyboard_check(ord("Z"))
+if global.trackingPlayer = true {
+	var jumpKey = keyboard_check_pressed(vk_space)
+	var leftKey = keyboard_check(vk_left)
+	var rightKey = keyboard_check(vk_right)
+	var dashKey = keyboard_check(ord("Z"))
+} else {
+	var jumpKey = false
+	var leftKey = false
+	var rightKey = false
+	var dashKey = false
+}
 var animationstep = 1
+
+
 
 if distance_to_object(ground) <= 1 {
 	onGround = true

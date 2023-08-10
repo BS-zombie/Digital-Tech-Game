@@ -27,6 +27,7 @@
     {"name":"spr_startButton","order":7,"path":"sprites/spr_startButton/spr_startButton.yy",},
     {"name":"spr_switch","order":10,"path":"sprites/spr_switch/spr_switch.yy",},
     {"name":"Sprite7","order":6,"path":"sprites/Sprite7/Sprite7.yy",},
+    {"name":"spr_binoculars","order":14,"path":"sprites/spr_binoculars/spr_binoculars.yy",},
     {"name":"spikes","order":7,"path":"objects/spikes/spikes.yy",},
     {"name":"exitPortal","order":1,"path":"objects/exitPortal/exitPortal.yy",},
     {"name":"portalSwitch","order":6,"path":"objects/portalSwitch/portalSwitch.yy",},
@@ -48,5 +49,6 @@
     {"name":"portalButton","order":5,"path":"objects/portalButton/portalButton.yy",},
     {"name":"spr_map_tileset","order":1,"path":"sprites/spr_map_tileset/spr_map_tileset.yy",},
     {"name":"deadPlayer","order":9,"path":"objects/deadPlayer/deadPlayer.yy",},
+    {"name":"Binoculars","order":10,"path":"objects/Binoculars/Binoculars.yy",},
   ],
 }
