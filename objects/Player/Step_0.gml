@@ -1,72 +1,54 @@
+
 if global.trackingPlayer = true {
 	var jumpKey = keyboard_check_pressed(vk_space)
 	var leftKey = keyboard_check(vk_left)
 	var rightKey = keyboard_check(vk_right)
-	var dashKey = keyboard_check(ord("Z"))
+	// var dashKey = keyboard_check(ord("Z"))
+	var dashKey = keyboard_check(vk_up)
 } else {
 	var jumpKey = false
 	var leftKey = false
 	var rightKey = false
 	var dashKey = false
 }
-var animationstep = 1
 
-
-
-if distance_to_object(ground) <= 1 {
-	onGround = true
-} else {
-	onGround = false
-}
-
-image_speed = 0;
-// walking animation
-if image_index < 4 and (leftKey or rightKey) {
-	image_speed = 1
-} else {
-	image_index = 0
-}
-
-if leftKey {
-	image_xscale = -1
-//	x += 11
-}
-
-
-if rightKey {
-	image_xscale = 1
-}
-
-
-//momvment
+// walking
 var move = rightKey - leftKey;
 hsp = move * walksp;
-vsp = vsp + grv;
 
 
+//"gravity"
+var touchingWall = place_meeting(x - 1, y, ground) - place_meeting(x + 1, y, ground)
+var touchingGround = place_meeting(x, y + 1, ground)
+if (touchingWall != 0) {
+	vsp = min(vsp + grv, 0.6)
+} else {
+	vsp = vsp + grv;
+}
 
 
-// more jumping
-
+// jumping
 if place_meeting(x, y + 5 + jumpLeanence, ground)  {
 	jumpTiming = 5
 } else {
 	jumpTiming = jumpTiming - 1
 }
-
-//jumping
-if ((place_meeting(x, y + jumpLeanence, ground)) or jumpTiming > 0) && (jumpKey) {
+if ((place_meeting(x, y + jumpLeanence, ground)) or jumpTiming > 0) and (jumpKey) {
 	vsp = -4
-};
-if (place_meeting(x + jumpLeanence, y, ground)) && (jumpKey) {
-	vsp = -4
-	hsp -= 4
-};
-if (place_meeting(x - jumpLeanence, y, ground)) && (jumpKey) {
-	vsp = -4
-	hsp += 4
 };
 
+if touchingWall != 0 {
+	hJumpTiming = 5
+} else {
+	hJumpTiming = hJumpTiming - 1
+}
+if ((touchingWall != 0) or (hJumpTiming > 0)) and jumpKey {
+	vsp = -4
+	hsp = touchingWall * 4
+}
+
+
+// collision
 // x collision
 if (place_meeting(x + hsp, y, ground)) {
 	while (!place_meeting(x + sign(hsp), y, ground)) {
@@ -75,7 +57,6 @@ if (place_meeting(x + hsp, y, ground)) {
 	hsp = 0;
 };
 x = x + hsp
-
 // y collision
 if (place_meeting(x, y + vsp, ground)) {
 	while (!place_meeting(x, y + sign(vsp), ground)) {
@@ -86,14 +67,35 @@ if (place_meeting(x, y + vsp, ground)) {
 };
 y = y + vsp
 
-// dashing
-if dashKey {
-	hsp += 1
-	vsp += 1
+// walking animation
+image_speed = 0;
+
+if touchingWall = 0 or touchingGround {
+	if image_index < 4 and (leftKey or rightKey) {
+		image_speed = 1
+	} else {
+		image_index = 0
+	}
+}
+if touchingWall != 0 and !touchingGround {
+	if touchingWall = 1 {
+		image_index = 5
+	}
+	if touchingWall = -1 {
+		image_index = 5
+	}
 }
 
 
 
+
+// player direction
+if leftKey {
+	image_xscale = -1
+}
+if rightKey {
+	image_xscale = 1
+}
 
 // deds
 if (x < 0) or (x > room_width) or (y < 0) or (y > room_height) {
