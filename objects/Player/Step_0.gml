@@ -77,7 +77,7 @@ if touchingWall = 0 or touchingGround {
 		image_index = 0
 	}
 }
-if touchingWall != 0 and !touchingGround {
+if ((touchingWall != (0)) and (!touchingGround)) {
 	if touchingWall = 1 {
 		image_index = 5
 	}
@@ -93,7 +93,7 @@ if touchingWall != 0 and !touchingGround {
 if leftKey {
 	image_xscale = -1
 }
-if rightKey {
+if (rightKey) {
 	image_xscale = 1
 }
 
