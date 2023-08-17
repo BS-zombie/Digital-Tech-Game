@@ -38,8 +38,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "gameElements",
+    "path": "folders/Sprites/gameElements.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
