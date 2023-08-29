@@ -10,8 +10,8 @@ var escKey = keyboard_check_pressed(vk_escape)
 
 
 // sprite definitions
-var menuStartOffline = 0
-var menuStartOnline = 1
+var menuStartOnline = 0
+var menuStartOffline = 1
 var menuOptions = 2
 var menuCredits = 3
 var menuExit = 4
