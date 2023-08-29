@@ -31,11 +31,16 @@ var menuOptionsControlsEscape = 15
 
 //image_index = 1
 
-// menu option selection
+// menu root
 if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 0
 	if upKey and takingInputs and (image_index > currentMenuLowerSprite) {
 		image_index --
+		show_debug_message("index changed")
+		show_debug_message("takinginputs: ", takingInputs)
+		show_debug_message("upkey: ", upKey)
+		show_debug_message("currntsprtlowerthingi: ", currentMenuLowerSprite)
+		show_debug_message(image_index)
 	}
 	if downKey and takingInputs and (image_index < currentMenuUpperSprite) {
 	image_index ++
@@ -58,6 +63,8 @@ if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= cu
 		game_end()
 	}
 }
+
+//submenu options
 if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 1
 	if upKey and takingInputs and (image_index < currentMenuLowerSprite) {
@@ -87,6 +94,8 @@ if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= cu
 		currentMenuUpperSprite = menuExit
 	}
 }
+
+// submenu sbmenu - controls
 if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 2
 	if upKey and takingInputs and (image_index < currentMenuLowerSprite) {
