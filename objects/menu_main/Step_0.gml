@@ -46,7 +46,7 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 		currentMenuUpperSprite = menuOptionsFullscreen
 	}
 	if (image_index = menuCredits) and enterKey {
-		room_goto(11)
+		room_goto(10)
 	}
 	if (image_index == menuExit) and enterKey {
 		game_end()
@@ -79,7 +79,7 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 	}
 	}
 	if escKey and takingInputs {
-		image_index = menuStartOffline
+		image_index = menuOptions
 		currentMenuLowerSprite = menuStartOnline
 		currentMenuUpperSprite = menuExit
 	}

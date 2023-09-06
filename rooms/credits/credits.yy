@@ -1,7 +1,7 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "unsuported",
+  "name": "credits",
   "creationCodeFile": "",
   "inheritCode": false,
   "inheritCreationOrder": false,
