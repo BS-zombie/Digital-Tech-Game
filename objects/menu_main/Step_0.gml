@@ -32,19 +32,8 @@ var menuOptionsControlsEscape = 15
 //image_index = 1
 
 // menu root
-if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
+if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 0
-	if upKey and takingInputs and (image_index > currentMenuLowerSprite) {
-		image_index --
-		show_debug_message("index changed")
-		show_debug_message("takinginputs: ", takingInputs)
-		show_debug_message("upkey: ", upKey)
-		show_debug_message("currntsprtlowerthingi: ", currentMenuLowerSprite)
-		show_debug_message(image_index)
-	}
-	if downKey and takingInputs and (image_index < currentMenuUpperSprite) {
-	image_index ++
-	}
 	if (image_index == menuStartOffline) and enterKey {
 		room_goto(2)
 	}
@@ -65,14 +54,9 @@ if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= cu
 }
 
 //submenu options
-if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
+if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 1
-	if upKey and takingInputs and (image_index < currentMenuLowerSprite) {
-		image_index --
-	}
-	if downKey and takingInputs and (image_index > currentMenuUpperSprite) {
-	image_index ++
-	}
+
 	if (image_index == menuOptionsVolume) and enterKey {
 		if volume > 11 {
 			volume ++
@@ -80,30 +64,25 @@ if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= cu
 			volume = 0
 		}
 	}
-	if (image_index == menuOptionsControls) and enterKey {
-		image_index = menuOptionsControlsLeft
-		currentMenuLowerSprite = menuOptionsControlsLeft
-		currentMenuUpperSprite = menuOptionsControlsEscape
-	}
+	//if (image_index == menuOptionsControls) and enterKey {
+	//	image_index = menuOptionsControlsLeft
+	//	currentMenuLowerSprite = menuOptionsControlsLeft
+	//	currentMenuUpperSprite = menuOptionsControlsEscape
+	//}
 	if (image_index == menuOptionsFullscreen) and enterKey {
 		fullscreen = !fullscreen
 	}
 	if escKey and takingInputs {
 		image_index = menuStartOffline
-		currentMenuLowerSprite = menuStartOffline
+		currentMenuLowerSprite = menuStartOnline
 		currentMenuUpperSprite = menuExit
 	}
 }
 
 // submenu sbmenu - controls
-if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
+if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 2
-	if upKey and takingInputs and (image_index < currentMenuLowerSprite) {
-		image_index --
-	}
-	if downKey and takingInputs and (image_index > currentMenuUpperSprite) {
-	image_index ++
-	}
+
 	//if(enterKey) {
 	//	switch(image_index) {
 	//		case menuOptionsControlsLeft
@@ -136,14 +115,29 @@ if takingInputs and (image_index >= currentMenuLowerSprite and image_index <= cu
 	if (image_index == menuOptionsControlsEscape) and enterKey {
 		controlSetter("escapeKey", keyboard_lastkey)
 	}
-	if escKey and takingInputs {
-		image_index = menuOptions
-		currentMenuLowerSprite = menuOptions
-		currentMenuUpperSprite = menuExit
-	}
+	//if escKey and takingInputs {
+	//	image_index = menuOptions
+	//	currentMenuLowerSprite = menuOptions
+	//	currentMenuUpperSprite = menuExit
+	//}
 }
 
-
+if upKey and (image_index > currentMenuLowerSprite) {
+	image_index --
+	show_debug_message("uppper:")
+	show_debug_message(currentMenuUpperSprite)
+	show_debug_message("lower:")
+	show_debug_message(currentMenuLowerSprite)
+	show_debug_message(image_index)
+}
+if downKey and takingInputs and (image_index < currentMenuUpperSprite) {
+	image_index ++
+	show_debug_message("uppper:")
+	show_debug_message(currentMenuUpperSprite)
+	show_debug_message("lower:")
+	show_debug_message(currentMenuLowerSprite)
+	show_debug_message(image_index)
+}
 
 
 
