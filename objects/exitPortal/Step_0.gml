@@ -4,6 +4,7 @@
 if (distance_to_object(Player) = 0) and (global.buttonPressed = true) {
 	if global.buttonPressed = true {
 		room_goto_next()
+		//room_fade(c_black,);
 	}
 }
 
@@ -17,3 +18,4 @@ if global.buttonPressed = true {
 	image_index = 0
 	image_speed = 0
 }
+
