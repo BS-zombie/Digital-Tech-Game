@@ -70,7 +70,13 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 	//	currentMenuUpperSprite = menuOptionsControlsEscape
 	//}
 	if (image_index == menuOptionsFullscreen) and enterKey {
-		fullscreen = !fullscreen
+		if window_get_fullscreen() = true {
+			window_set_fullscreen(false)
+		} else {
+			if window_get_fullscreen() = false {
+				window_set_fullscreen(true)
+			}
+	}
 	}
 	if escKey and takingInputs {
 		image_index = menuStartOffline
