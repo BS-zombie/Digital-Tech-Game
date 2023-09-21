@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // pushing
-if distance_to_object(Player) < 2 {
+if distance_to_object(Player) <= 1 {
 	if Player.x < x {
 		hsp ++
 	}
@@ -32,3 +32,4 @@ if (place_meeting(x, y + vsp, ground)) {
 };
 y = y + vsp
 x = x + hsp
+hsp = 0
