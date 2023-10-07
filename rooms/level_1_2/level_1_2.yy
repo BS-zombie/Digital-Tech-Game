@@ -199,6 +199,8 @@
     {"name":"inst_65D22229","path":"rooms/level_1_2/level_1_2.yy",},
     {"name":"inst_7DA1383E","path":"rooms/level_1_2/level_1_2.yy",},
     {"name":"inst_5001F2AB","path":"rooms/level_1_2/level_1_2.yy",},
+    {"name":"inst_A7393CA","path":"rooms/level_1_2/level_1_2.yy",},
+    {"name":"inst_51151800","path":"rooms/level_1_2/level_1_2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -207,6 +209,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_CA527A6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"Player","path":"objects/Player/Player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":48.0,"y":104.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_457B5DD6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"exitPortal","path":"objects/exitPortal/exitPortal.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":216.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52FBA086","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"camera","path":"objects/camera/camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":80.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_A7393CA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"Binoculars","path":"objects/Binoculars/Binoculars.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":328.0,"y":88.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_51151800","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"TutorialCat","path":"objects/TutorialCat/TutorialCat.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-88.0,"y":96.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":32,"SerialiseWidth":48,"TileCompressedData":[
 -194,8,-11,-2147483648,-8,8,-15,-2147483648,-5,8,-2,-2147483648,-7,8,-44,-2147483648,-4,8,-44,-2147483648,-4,8,-44,-2147483648,-2,8,-288,-2147483648,-2,8,2,5,17,-16,-2147483648,1,16,-9,5,1,17,-11,-2147483648,1,16,-4,5,1,
