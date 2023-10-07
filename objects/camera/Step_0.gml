@@ -2,10 +2,10 @@
 // You can write your code in this editor
 
 
-if global.trackingPlayer = true {
+if global.cameraMode = "player" {
 	x += ((Player.x - x) * movePercentage)
 	y += ((Player.y - y) * movePercentage)
-} else {
+} else if global.cameraMode = "binoculars" {
 	if abs(Binoculars.x - x) > 15  {
 		x += ((Binoculars.x - x) * movePercentage)
 		y += ((Binoculars.y - y) * movePercentage)
@@ -22,6 +22,7 @@ if global.trackingPlayer = true {
 			y = y + 2
 		}
 	}
+} else if global.cameraMode = "pause" {
 }
 
 

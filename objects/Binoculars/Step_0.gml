@@ -1,13 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if global.paused {
+	image_speed = 0
+} else {
+	
+	
+	
+	
 
 var interactKey = keyboard_check(ord("X"))
 
 if (interactKey) and (distance_to_object(Player) < range) {
-	global.trackingPlayer = false
+	global.cameraMode = "binoculars"
 } else {
-	global.trackingPlayer = true
+	global.cameraMode = "player"
 }
 
 if distance_to_object(Player) < range {
@@ -20,3 +26,7 @@ if distance_to_object(Player) < range {
 	}
 }
 
+
+
+
+}

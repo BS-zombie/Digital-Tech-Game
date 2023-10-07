@@ -1,3 +1,8 @@
+if global.paused {
+	image_speed = 0
+} else {
+
+
 
 if global.trackingPlayer = true {
 	var jumpKey = keyboard_check_pressed(vk_space)
@@ -56,7 +61,7 @@ if (place_meeting(x + hsp, y, ground)) {
 	}
 	hsp = 0;
 };
-x = x + hsp
+
 // y collision
 if (place_meeting(x, y + vsp, ground)) {
 	while (!place_meeting(x, y + sign(vsp), ground)) {
@@ -65,6 +70,9 @@ if (place_meeting(x, y + vsp, ground)) {
 	vsp = 0;
 	jumping = false
 };
+
+
+x = x + hsp
 y = y + vsp
 
 // walking animation
@@ -114,4 +122,8 @@ if outOfBounds or touchingSpikes {
 		respawn()
 	}
 	else image_index = 4
+}
+
+
+
 }

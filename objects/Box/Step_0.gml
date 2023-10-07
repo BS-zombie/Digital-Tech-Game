@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//pausing
+if global.paused {
+	image_speed = 0
+} else {
+
+
+
 // pushing
 if distance_to_object(Player) <= 1 {
 	if Player.x < x {
@@ -43,4 +50,9 @@ if distance_to_object(spikes) = 0 {
 
 if outOfBounds or touchingSpikes {
 	respawn()
+}
+
+
+
+
 }
