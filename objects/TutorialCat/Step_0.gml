@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+//pausing
+if global.paused {
+	image_speed = 0
+} else {
 
 
 
@@ -44,4 +47,8 @@ if room = level_1_6 {
 		image_index = 1
 	}
 	
+}
+
+
+
 }
