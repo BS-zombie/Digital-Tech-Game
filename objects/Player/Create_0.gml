@@ -32,6 +32,10 @@ function respawn() {
 	touchingSpikes = false
 	image_index = 0
 	doDeathAnimation = true
+	if instance_exists(Box) {
+		Box.x = Box.startX
+		Box.y = Box.startY
+	}
 }
 
 
