@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (distance_to_object(Player) = 0) {
+if (distance_to_object(Player) = 0) or (distance_to_object(Box) = 0) {
 	global.buttonPressed = true
 }
 

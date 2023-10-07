@@ -12,7 +12,7 @@ if distance_to_object(Player) <= 1 {
 }
 
 
-
+vsp = vsp + grv;
 
 // collision
 // x collision
@@ -33,3 +33,14 @@ if (place_meeting(x, y + vsp, ground)) {
 y = y + vsp
 x = x + hsp
 hsp = 0
+
+if (x < 0) or (x > room_width) or (y < 0) or (y > room_height) {
+	outOfBounds = true
+}
+if distance_to_object(spikes) = 0 {
+	touchingSpikes = true
+}
+
+if outOfBounds or touchingSpikes {
+	respawn()
+}
