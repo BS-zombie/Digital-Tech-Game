@@ -35,7 +35,7 @@ var menuOptionsControlsEscape = 15
 if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 0
 	if (image_index == menuStartOffline) and enterKey {
-		room_goto(2)
+		room_goto(12)
 	}
 	if (image_index == menuStartOnline) and enterKey {
 		room_goto(1)
@@ -46,7 +46,7 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 		currentMenuUpperSprite = menuOptionsFullscreen
 	}
 	if (image_index = menuCredits) and enterKey {
-		room_goto(10)
+		room_goto(12)
 	}
 	if (image_index == menuExit) and enterKey {
 		game_end()
