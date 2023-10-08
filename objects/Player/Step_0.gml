@@ -118,10 +118,18 @@ if outOfBounds or touchingSpikes {
 		instance_create_layer(x, y, "Instances_1", deadPlayer)
 	}
 	doDeathAnimation = false
-	if deadPlayer.image_index = 13 {
+	
+	if instance_exists(deadPlayer) {
+		if deadPlayer.image_index = 13 {
+		respawn()
+		} else image_index = 4
+	} else {
 		respawn()
 	}
-	else image_index = 4
+	
+	
+	
+	
 }
 
 

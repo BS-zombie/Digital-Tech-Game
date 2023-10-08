@@ -13,7 +13,9 @@ if global.paused {
 	global.cameraMode = "pause"
 } else if justchanged {global.cameraMode = "player"}
 
-
+if global.paused {
+	
+}
 
 
 
