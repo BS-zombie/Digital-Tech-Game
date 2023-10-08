@@ -35,10 +35,10 @@ var menuOptionsControlsEscape = 15
 if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
 	optionsMenuLevel = 0
 	if (image_index == menuStartOffline) and enterKey {
-		room_goto(12)
+		room_goto(2)
 	}
 	if (image_index == menuStartOnline) and enterKey {
-		room_goto(1)
+		room_goto(12)
 	}
 	if (image_index == menuOptions) and enterKey {
 		image_index = menuOptionsVolume
