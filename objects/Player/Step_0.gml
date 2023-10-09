@@ -5,11 +5,11 @@ if global.paused {
 
 
 if global.trackingPlayer = true {
-	var jumpKey = keyboard_check_pressed(vk_space)
-	var leftKey = keyboard_check(vk_left)
-	var rightKey = keyboard_check(vk_right)
+	var jumpKey = keyboard_check_pressed(global.inputJumpKey)
+	var leftKey = keyboard_check(global.inputLeftKey)
+	var rightKey = keyboard_check(global.inputRightKey)
 	// var dashKey = keyboard_check(ord("Z"))
-	var dashKey = keyboard_check(vk_up)
+	var dashKey = keyboard_check(global.inputClimbKey)
 } else {
 	var jumpKey = false
 	var leftKey = false
@@ -92,6 +92,7 @@ if ((touchingWall != (0)) and (!touchingGround)) {
 	if touchingWall = -1 {
 		image_index = 5
 	}
+	audio_create_stream( )
 }
 
 

@@ -13,8 +13,8 @@ if global.cameraMode = "player" {
 		
 		x += ((Binoculars.x - x) * movePercentage)
 		
-		var upKey = keyboard_check(vk_up)
-		var downKey = keyboard_check(vk_down)
+		var upKey = keyboard_check(global.inputUpKey)
+		var downKey = keyboard_check(global.inputDownKey)
 		if upKey and (y > (64)) {
 			y = y - 2
 		}

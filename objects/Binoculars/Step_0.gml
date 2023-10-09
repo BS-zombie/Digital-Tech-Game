@@ -8,7 +8,7 @@ if global.paused {
 	
 	
 
-var interactKey = keyboard_check(ord("X"))
+var interactKey = keyboard_check(global.inputInteractKey)
 
 if (interactKey) and (distance_to_object(Player) < range) {
 	global.cameraMode = "binoculars"

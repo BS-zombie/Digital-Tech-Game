@@ -12,28 +12,28 @@ fullscreen = false
 optionsMenuLevel = 0
 
 function controlSetter(controlName, NewKey) {
-	if controlName == "leftKey" {
-		global.leftKey = NewKey
+	if controlName == "inputLeftKey" {
+		global.inputLeftKey = NewKey
 	}
-	if controlName == "rightKey" {
-		global.rightKey = NewKey
+	if controlName == "inputRightKey" {
+		global.inputRightKey = NewKey
 	}
-	if controlName == "upKey" {
-		global.upKey = NewKey
+	if controlName == "inputUpKey" {
+		global.inputUpKey = NewKey
 	}
-	if controlName == "downKey" {
-		global.downKey = NewKey
+	if controlName == "inputDownKey" {
+		global.inputDownKey = NewKey
 	}
-	if controlName == "jumpKey" {
-		global.jumpKey = NewKey
+	if controlName == "inputJumpKey" {
+		global.inputJumpKey = NewKey
 	}
-	if controlName == "interactKey" {
-		global.interactKey = NewKey
+	if controlName == "inputInteractKey" {
+		global.inputInteractKey = NewKey
 	}
-	if controlName == "climbKey" {
-		global.climbKey = NewKey
+	if controlName == "inputClimbKey" {
+		global.inputClimbKey = NewKey
 	}
-	if controlName == "escapeKey" {
-		global.escapeKey = NewKey
+	if controlName == "inputEscapeKey" {
+		global.inputEscapeKey = NewKey
 	}
 }

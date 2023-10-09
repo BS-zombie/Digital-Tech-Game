@@ -2,10 +2,10 @@
 
 
 //inputs
-var upKey = keyboard_check_pressed(vk_up)
-var downKey = keyboard_check_pressed(vk_down)
-var enterKey = keyboard_check_pressed(vk_enter)
-var escKey = keyboard_check_pressed(vk_escape)
+var upKey = keyboard_check_pressed(global.inputUpKey)
+var downKey = keyboard_check_pressed(global.inputDownKey)
+var enterKey = keyboard_check_pressed(global.inputEnterKey)
+var escKey = keyboard_check_pressed(global.inputEscapeKey)
 
 
 
@@ -64,11 +64,13 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 			volume = 0
 		}
 	}
-	//if (image_index == menuOptionsControls) and enterKey {
-	//	image_index = menuOptionsControlsLeft
-	//	currentMenuLowerSprite = menuOptionsControlsLeft
-	//	currentMenuUpperSprite = menuOptionsControlsEscape
-	//}
+	if (image_index == menuOptionsControls) and enterKey {
+		if global.contols = "wasd" {
+			global.contols = "arrows"
+		} else if global.contols = "arrows" {
+			global.contols = "wasd"
+		}
+	}
 	if (image_index == menuOptionsFullscreen) and enterKey {
 		if window_get_fullscreen() = true {
 			window_set_fullscreen(false)
