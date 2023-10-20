@@ -92,7 +92,6 @@ if ((touchingWall != (0)) and (!touchingGround)) {
 	if touchingWall = -1 {
 		image_index = 5
 	}
-	audio_create_stream( )
 }
 
 
@@ -122,10 +121,20 @@ if outOfBounds or touchingSpikes {
 	
 	if instance_exists(deadPlayer) {
 		if deadPlayer.image_index = 13 {
-		respawn()
+			if instance_exists(Box) {
+				respawn(true)
+			} else {
+				respawn(false)
+			}
+		
 		} else image_index = 4
 	} else {
-		respawn()
+		if instance_exists(Box) {
+			respawn(true)
+		} else {
+		respawn(false)
+		}
+		
 	}
 	
 	

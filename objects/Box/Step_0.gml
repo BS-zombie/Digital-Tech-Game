@@ -6,8 +6,6 @@ if global.paused {
 	image_speed = 0
 } else {
 
-
-
 // pushing
 if distance_to_object(Player) <= 1 {
 	if Player.x < x {
@@ -17,7 +15,6 @@ if distance_to_object(Player) <= 1 {
 		hsp --
 	}
 }
-
 
 vsp = vsp + grv;
 
@@ -51,8 +48,4 @@ if distance_to_object(spikes) = 0 {
 if outOfBounds or touchingSpikes {
 	respawn()
 }
-
-
-
-
 }

@@ -23,7 +23,7 @@ doDeathAnimation = true
 wallJumping = false
 
 
-function respawn() {
+function respawn(box) {
 	x = startX
 	y = startY
 	deaths += 1
@@ -32,7 +32,7 @@ function respawn() {
 	touchingSpikes = false
 	image_index = 0
 	doDeathAnimation = true
-	if instance_exists(Box) {
+	if box {
 		Box.x = Box.startX
 		Box.y = Box.startY
 	}
