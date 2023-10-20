@@ -54,14 +54,14 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 }
 
 //submenu options
-if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) {
+if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSprite) and (image_index >= menuOptionsVolume) {
 	optionsMenuLevel = 1
 
 	if (image_index == menuOptionsVolume) and enterKey {
-		if volume > 11 {
-			volume ++
+		if global.volume < 9 {
+			global.volume ++
 		} else {
-			volume = 0
+			global.volume = 0
 		}
 	}
 	if (image_index == menuOptionsControls) and enterKey {
@@ -71,14 +71,16 @@ if (image_index >= currentMenuLowerSprite and image_index <= currentMenuUpperSpr
 			global.contols = "wasd"
 		}
 	}
+	//if (image_index == menuOptionsFullscreen) and enterKey {
+	//	if window_get_fullscreen() = true {
+	//		window_set_fullscreen(false)
+	//	} else {
+	//		if window_get_fullscreen() = false {
+	//			window_set_fullscreen(true)
+	//		}
+	//}
 	if (image_index == menuOptionsFullscreen) and enterKey {
-		if window_get_fullscreen() = true {
-			window_set_fullscreen(false)
-		} else {
-			if window_get_fullscreen() = false {
-				window_set_fullscreen(true)
-			}
-	}
+		window_set_fullscreen(!window_get_fullscreen())
 	}
 	if escKey and takingInputs {
 		image_index = menuOptions

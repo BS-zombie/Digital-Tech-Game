@@ -7,7 +7,7 @@ image_index = 0
 currentMenuLowerSprite = 0
 currentMenuUpperSprite = 4
 takingInputs = true
-volume = 0
+global.volume = 0
 fullscreen = false
 optionsMenuLevel = 0
 
